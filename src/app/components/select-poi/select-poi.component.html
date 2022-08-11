@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> {{ themePois | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="this.imgPractices.length === radioPois.length">
+    <ion-radio-group
+      (ionChange)="selectedPoiChange($event)"
+      [value]="selectedPoiId"
+    >
+      <ion-item *ngFor="let poi of radioPois; let i = index">
+        <ion-radio slot="start" [value]="poi.id"></ion-radio>
+        <ion-img
+          style="width: 24px; height: 24px; margin-right: 12px"
+          *ngIf="poi.imgTypePoi.src && !this.imgPractices[i].hideImgPracticeSrc"
+          [style.background-color]="
+            poi.imgTypePoi.color ? poi.imgTypePoi.color : 'transparent'
+          "
+          [src]="this.imgPractices[i].src"
+          (ionError)="onImgPracticeSrcError(i)"
+        ></ion-img>
+        <ion-label class="ion-text-wrap">{{ poi.name }}</ion-label>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()" color="primary" fill="clear">
+        {{ 'mapTrek.poisAlert.cancelButton' | translate }}
+      </ion-button>
+      <ion-button (click)="select()" color="primary" fill="clear">
+        {{ 'mapTrek.poisAlert.confirmButton' | translate }}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

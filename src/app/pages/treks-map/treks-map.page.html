@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> {{ appName }} </ion-title>
+  </ion-toolbar>
+  <ion-toolbar
+    *ngIf="
+      (!(onlineTreks.onlineTreksError$ | async) && !offline) ||
+      (offline && this.filteredTreks && this.filteredTreks.length > 0)
+    "
+  >
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col class="vertical-center ion-margin-start">
+          <ion-button
+            (click)="presentFilters()"
+            color="light"
+            size="small"
+            class="custom-button"
+          >
+            {{ 'toolbar.filters' | translate }} {{ numberOfActiveFilters
+            }}</ion-button
+          >
+          <ion-button
+            (click)="presentSearch()"
+            color="light"
+            size="small"
+            class="custom-button ion-margin-start"
+          >
+            {{ 'toolbar.search' | translate }}</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="!offline; else treksMap">
+    <app-connect-error
+      *ngIf="onlineTreks.onlineTreksError$ | async; else treksMap"
+      icon="wifi"
+      [title]="'error.title' | translate"
+      [content]="'error.TreksMap' | translate"
+      [buttonText]="'error.buttonText' | translate"
+      (retry)="loadTreks()"
+    >
+    </app-connect-error>
+  </ng-container>
+  <ng-template #treksMap>
+    <app-map-treks-viz
+      *ngIf="canDisplayMap"
+      [offline]="offline"
+      [filteredTreks]="filteredTreks"
+      (navigateToTrek)="navigateToTrek($event)"
+      [mapConfig]="mapConfig"
+      [dataSettings]="settings.data$.value"
+      [commonSrc]="commonSrc"
+    >
+    </app-map-treks-viz>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button class="no-outline" [routerLink]="treksUrl">
+        <ion-icon name="reorder-four-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ng-template>
+</ion-content>

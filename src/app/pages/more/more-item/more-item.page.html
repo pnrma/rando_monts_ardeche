@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/more"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="moreItem">{{ moreItem.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ng-container *ngIf="connectionError || !moreItem; else moreItemTemplate">
+    <ng-container *ngIf="!moreItem && !connectionError; else connectError">
+      <div class="spinner-container">
+        <ion-spinner color="primary"></ion-spinner>
+      </div>
+    </ng-container>
+
+    <ng-template #connectError>
+      <app-connect-error
+        *ngIf="connectionError"
+        icon="wifi"
+        [title]="'error.title' | translate"
+        [content]="'error.contentMoreItem' | translate"
+        [buttonText]="'error.buttonText' | translate"
+        (retry)="refresh()"
+      >
+      </app-connect-error>
+    </ng-template>
+  </ng-container>
+
+  <ng-template #moreItemTemplate>
+    <ion-grid fixed *ngIf="!!moreItem">
+      <ion-row>
+        <ion-col>
+          <div *ngIf="moreItem.content" [innerHTML]="moreItem.content"></div>
+          <div *ngIf="moreItem.external_url">
+            <a [href]="moreItem.external_url"> {{ moreItem.external_url }} </a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+</ion-content>

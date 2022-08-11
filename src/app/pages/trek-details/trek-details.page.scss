@@ -1,0 +1,130 @@
+.bold {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.font-medium {
+  font-size: 18px;
+}
+
+.extra-details {
+  line-height: 1.5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.icon-detail {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+ion-header {
+  .custom-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.0125em;
+  }
+}
+
+.custom-divider {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 5px 10px 5px 10px;
+  background: var(--ion-color-primary) !important;
+  color: var(--ion-color-primary-contrast);
+}
+
+div[scrollx='true'] {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -webkit-overflow-scrolling: touch;
+  .scroll-trek-item {
+    flex: 0 0 auto;
+    width: 320px;
+  }
+}
+
+.treks-card-container {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.no-vertical-padding {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.no-margin-top {
+  margin-top: 0px;
+}
+
+.stage-button {
+  width: calc(50% - 5px);
+  white-space: pre-wrap;
+  height: auto;
+  min-height: 2.8em;
+  background-color: rgba(var(--ion-color-primary-rgb), 0.04);
+  text-transform: none;
+  font-size: 16px;
+}
+
+.is-alone {
+  width: 100%;
+}
+
+.stage-button-previous {
+  margin-left: 0px;
+}
+
+.stage-button-next {
+  margin-right: 0px;
+}
+
+.next-previous-stage {
+  @media screen and (min-width: 540px) {
+    max-width: 50%;
+    .stage-button-previous {
+      margin-right: 5px;
+    }
+
+    .stage-button-next {
+      margin-left: 5px;
+    }
+  }
+  @media screen and (max-width: 540px) {
+    width: 100%;
+    .stage-button-previous {
+      margin-right: 0px;
+    }
+
+    .stage-button-next {
+      margin-left: 0px;
+    }
+  }
+}
+
+.stage-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.download-container,
+.share-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  ion-button {
+    width: 100%;
+  }
+}

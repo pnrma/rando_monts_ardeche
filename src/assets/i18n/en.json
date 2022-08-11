@@ -1,0 +1,148 @@
+{
+  "toolbar": {
+    "filters": "Filters",
+    "search": "Search",
+    "orderTitle": "Order by",
+    "orderByAlphabet": "A-Z",
+    "orderByLocation": "Proximity",
+    "orderByRandom": "Random"
+  },
+  "tabbar": {
+    "treks": "Treks",
+    "offline": "Offline",
+    "more": "Informations"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Name of the trek",
+    "noResult": "No trek corresponds to your search"
+  },
+  "filters": {
+    "title": "Filters",
+    "erase": "Erase all",
+    "results": "Show {{nb}} treks",
+    "oneresult": "Display the trek",
+    "zeroresult": "No trek matches those filters",
+    "confirmButton": "Ok",
+    "cancelButton": "Cancel",
+    "selectPlaceholder": "Select",
+    "searchPlaceholder": "Search"
+  },
+  "mapTreks": {
+    "treksAlert": {
+      "title": "Choose a hike",
+      "confirmButton": "Ok",
+      "cancelButton": "Cancel",
+      "informUser": "Several hikes are available from this starting point"
+    }
+  },
+  "mapTrek": {
+    "enableNotification": "Enable notifications",
+    "disableNotification": "Disable notifications",
+    "poisAlert": {
+      "confirmButton": "Ok",
+      "cancelButton": "Cancel"
+    }
+  },
+  "trek": {
+    "offline": "Offline",
+    "share": "Share",
+    "downloadAlert": {
+      "title": "Offline",
+      "contentTrek": "Download this trek for offline access",
+      "contentItinerancy": "Download the itinerant treks for offline access",
+      "confirmButton": "Download",
+      "cancelButton": "Cancel",
+      "success": "The trek is available offline",
+      "error": "An error occurred while downloading",
+      "confirmError": "Ok",
+      "firstDownload": "During the first download, the application also stores global data.",
+      "loading": "Downloading ...",
+      "storage": "Decompressing ..."
+    },
+    "details": {
+      "city": "City :",
+      "departure": "Departure :",
+      "arrival": "Arrival :",
+      "departureArrival": "Departure / Arrival :",
+      "practice": "Practices",
+      "theme": "Themes",
+      "description": "Description",
+      "rules": "Regulation",
+      "rulesDescription": "This route is located in the heart of the national park, please respect the regulations.",
+      "access": "Road access",
+      "parking": "Parking advised",
+      "advice": "Advices",
+      "desk": "Places of information",
+      "profile": "Altimetric profile",
+      "stages": "Stages",
+      "stage": "Stage",
+      "parent": "Multi-day trekking",
+      "features": "Features",
+      "poi": {
+        "name": "Heritage",
+        "showAllLabel": "Show all heritages",
+        "hideAllLabel": "Do not show all patrimonies anymore"
+      },
+      "touristicContent": {
+        "name": "Near by",
+        "showAllLabel": "Show all",
+        "hideAllLabel": "Do not show all anymore"
+      },
+      "informationDesk": { "website": "Website" },
+      "usefulInformation": "Useful Information",
+      "contact": "Contact"
+    }
+  },
+  "treks": {
+    "numberOftreks": "treks",
+    "numberOftrek": "One trek",
+    "noOfflineResults": "The selected filters do not match any of your recorded hikes.",
+    "showAllTreks": "View all recorded hikes",
+    "emptyOfflineTreks": "You will find your offline hikes here",
+    "departure": "Departure"
+  },
+  "geolocate": {
+    "askLocatePermission": "You didn't allow the application to locate you. Do you want to open settings ?",
+    "cancel": "Cancel",
+    "open": "Open",
+    "poiNearBy": "Point of interest near by",
+    "notificationTitle": "Geolocation",
+    "error": {
+      "header": "Geolocation is not possible",
+      "subHeader": "The application has a problem to recover your position.",
+      "message": "Please make sure your GPS is active and you have authorized the application to use it.",
+      "confirmButton": "OK"
+    }
+  },
+  "error": {
+    "title": "Connection problem",
+    "contentTreks": "Please make sure you are logged in to access the full hikes list",
+    "contentMore": "Please make sure you are logged in to access additional information",
+    "contentMoreItem": "Please make sure you are logged in to access the information",
+    "contentTrekMap": "Please make sure you are logged in to access the undownloaded map",
+    "contentTreksMap": "Please make sure you are logged in to access the full hikes map",
+    "buttonText": "Retry"
+  },
+  "trekCard": {
+    "deleteTitle": "Suppression",
+    "deleteLabel": "Remove",
+    "askDelete": "Remove this hike from offline mode?",
+    "deletionInProgress": "Deletion in progress",
+    "trekIsDelete": "The hike is removed from the offline mode",
+    "errorWhileDeleting": "An error occurred while removing the hike",
+    "cancelButton": "Cancel",
+    "confirmButton": "Ok"
+  },
+  "inAppDisclosure": {
+    "title": "Use of your location",
+    "description": "We will ask your permission to use your location.",
+    "geolocateFeatures": "The application uses your location to :",
+    "geolocateForMap": "Be able to find your way on the maps",
+    "geolocateForSort": "Sort the list of hikes by proximity",
+    "geolocateForNavigate": "Always center the map of a hike on your location",
+    "geolocateForNotification": "Show local notifications, when you activate the option from the map of a hike, to inform you of the presence of a POI nearby. This feature uses your location even if the application is in the background",
+    "dataUsage": "We do not collect any location.",
+    "displayRequest": "Display the request"
+  }
+}

@@ -1,0 +1,19 @@
+.list-mode-disabled {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.custom-button {
+  width: 100px;
+  text-transform: capitalize;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-icon-button::part(native) {
+  font-size: 10px;
+}

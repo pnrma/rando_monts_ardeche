@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="close()">
+        <ion-icon size="large" slot="start" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'search.title' | translate | uppercase }}</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-searchbar
+      placeholder="{{ 'search.placeholder' | translate }}"
+      (ionChange)="search($event)"
+    >
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container>
+    <ion-list *ngIf="filteredTreks && filteredTreks.length > 0; else userMsg">
+      <ion-item
+        class="ion-activatable"
+        *ngFor="let trek of filteredTreks | slice: 0:currentMaxTreks"
+        (click)="navigateToTrek(trek.properties.id)"
+      >
+        <ion-label>{{ trek.properties.name }}</ion-label>
+        <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list>
+    <ng-template #userMsg>
+      <ion-grid class="flex-container" fixed>
+        <ion-row>
+          <ion-col *ngIf="currentSearchValue">
+            {{ 'search.noResult' | translate }}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ng-template>
+    <ion-infinite-scroll
+      [disabled]="
+        !filteredTreks ||
+        this.currentMaxTreks === filteredTreks.length ||
+        filteredTreks.length < treksByStep
+      "
+      threshold="100px"
+      (ionInfinite)="expandTreks($event)"
+    >
+      <ion-infinite-scroll-content> </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ng-container>
+</ion-content>

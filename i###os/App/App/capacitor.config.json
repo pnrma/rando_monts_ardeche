@@ -1,0 +1,16 @@
+{
+	"appId": "com.parcmontsardeche.rando",
+	"appName": "Rando Ardèche",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchAutoHide": false
+		},
+		"LocalNotifications": {
+			"smallIcon": "ic_stat_icon_config_sample",
+			"iconColor": "#FFFFFF",
+			"sound": "beep.wav"
+		}
+	}
+}

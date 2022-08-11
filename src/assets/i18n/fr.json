@@ -1,0 +1,148 @@
+{
+  "toolbar": {
+    "filters": "Filtres",
+    "search": "Recherche",
+    "orderTitle": "Trier par",
+    "orderByAlphabet": "Ordre alphabétique",
+    "orderByLocation": "Proximité",
+    "orderByRandom": "Aléatoire"
+  },
+  "tabbar": {
+    "treks": "Randonnées",
+    "offline": "Hors ligne",
+    "more": "Informations"
+  },
+  "search": {
+    "title": "Recherche",
+    "placeholder": "nom de la randonnée",
+    "noResult": "Aucune randonnée ne correspond à votre recherche"
+  },
+  "filters": {
+    "title": "Filtres",
+    "erase": "Effacer tout",
+    "results": "Afficher les {{nb}} randonnées",
+    "oneresult": "Afficher la randonnée",
+    "zeroresult": "Aucune randonnée ne correspond à ces filtres",
+    "confirmButton": "Ok",
+    "cancelButton": "Annuler",
+    "selectPlaceholder": "Sélectionner des",
+    "searchPlaceholder": "Rechercher"
+  },
+  "mapTreks": {
+    "treksAlert": {
+      "title": "Choisir une randonnée",
+      "confirmButton": "Ok",
+      "cancelButton": "Annuler",
+      "informUser": "Plusieurs randonnées sont disponibles depuis ce point de départ"
+    }
+  },
+  "mapTrek": {
+    "enableNotification": "Activer les notifications",
+    "disableNotification": "Désactiver les notifications",
+    "poisAlert": {
+      "confirmButton": "Ok",
+      "cancelButton": "Annuler"
+    }
+  },
+  "trek": {
+    "offline": "Hors ligne",
+    "share": "Partager",
+    "downloadAlert": {
+      "title": "Mode hors ligne",
+      "contentTrek": "Télécharger cette randonnée afin d'y avoir accès hors connexion",
+      "contentItinerancy": "Télécharger les randonnées itinérantes afin d'y avoir accès hors connexion",
+      "confirmButton": "Télécharger",
+      "cancelButton": "Annuler",
+      "success": "La randonnée est disponible hors ligne",
+      "error": "Une erreur est survenue lors du téléchargement",
+      "confirmError": "Ok",
+      "firstDownload": "Lors du premier téléchargement, l'application stocke aussi des données globales.",
+      "loading": "Téléchargement en cours ...",
+      "storage": "Décompression des données en cours..."
+    },
+    "details": {
+      "city": "Commune :",
+      "departure": "Départ",
+      "arrival": "Arrivée",
+      "departureArrival": "Départ / Arrivée",
+      "practice": "Pratiques",
+      "theme": "Thématiques",
+      "description": "Description",
+      "rules": "Réglementation",
+      "rulesDescription": "Cet itinéraire est dans le coeur du parc national, veuillez respecter la réglementation.",
+      "access": "Accès routier",
+      "parking": "Parking conseillé",
+      "advice": "Recommandations",
+      "desk": "Lieux de renseignement",
+      "profile": "Profil altimétrique",
+      "stages": "Étapes",
+      "stage": "Étape",
+      "parents": "Séjour",
+      "features": "Caractéristiques",
+      "poi": {
+        "name": "Patrimoines",
+        "showAllLabel": "Afficher tous les patrimoines",
+        "hideAllLabel": "Ne plus afficher tous les patrimoines"
+      },
+      "touristicContent": {
+        "name": "À proximité",
+        "showAllLabel": "Afficher tout",
+        "hideAllLabel": "Ne plus tout afficher"
+      },
+      "informationDesk": { "website": "Site web" },
+      "usefulInformation": "Information pratiques",
+      "contact": "Contact"
+    }
+  },
+  "treks": {
+    "numberOftreks": "Randonnées",
+    "numberOftrek": "Une randonnée",
+    "noOfflineResults": "Les filtres sélectionnés ne correspondent à aucune de vos randonnées enregistrées.",
+    "showAllTreks": "Afficher toutes les randonnées enregistrées",
+    "emptyOfflineTreks": "Ici, vous retrouverez vos randonnées disponibles hors ligne",
+    "departure": "Départ"
+  },
+  "geolocate": {
+    "askLocatePermission": "Vous n'avez pas autorisé l'application à suivre votre localisation. Voulez vous ouvrir vos paramètres ?",
+    "cancel": "Annuler",
+    "open": "Ouvrir",
+    "poiNearBy": "Point d'intérêt à proximité",
+    "notificationTitle": "Géoréférencement",
+    "error": {
+      "header": "Géolocalisation impossible",
+      "subHeader": "L'application rencontre un problème pour récupérer votre position.",
+      "message": "Veuillez vérifier que votre GPS est actif et que vous avez bien autorisé l'application à l'utiliser.",
+      "confirmButton": "OK"
+    }
+  },
+  "error": {
+    "title": "Problème de connexion",
+    "contentTreks": "Veuillez vous assurer d’être connecté afin d’accéder à la liste complète des randonnées",
+    "contentMore": "Veuillez vous assurer d’être connecté afin d’accéder aux informations supplémentaires",
+    "contentMoreItem": "Veuillez vous assurer d’être connecté afin d’accéder à l'information",
+    "contentTrekMap": "Veuillez vous assurer d’être connecté afin d’accéder à la randonnée non téléchargée",
+    "contentTreksMap": "Veuillez vous assurer d’être connecté afin d’accéder à la carte complète des randonnées",
+    "buttonText": "Réessayer"
+  },
+  "trekCard": {
+    "deleteTitle": "Suppression",
+    "deleteLabel": "Supprimer",
+    "askDelete": "Supprimer cette randonnée du mode hors ligne ?",
+    "deletionInProgress": "Suppression en cours",
+    "trekIsDelete": "La randonnée est supprimée du mode hors ligne",
+    "errorWhileDeleting": "Une erreur est survenue lors de la suppression de la randonnée",
+    "cancelButton": "Annuler",
+    "confirmButton": "Ok"
+  },
+  "inAppDisclosure": {
+    "title": "Utilisation de votre localisation",
+    "description": "Nous allons vous demander la permission d'utiliser votre localisation.",
+    "geolocateFeatures": "L'application utilise votre localisation afin de :",
+    "geolocateForMap": "Pouvoir vous repérer sur les cartes",
+    "geolocateForSort": "Trier la liste des randonnées par proximité",
+    "geolocateForNavigate": "Toujours centrer la carte d'une randonnée sur votre localisation",
+    "geolocateForNotification": "Afficher des notifications locales, lorsque vous activez l'option depuis la carte d'une randonnée, pour vous informer de la présence d'un POI aux alentours. Cette fonction utilise votre localisation même si l'application est en arrière-plan",
+    "dataUsage": "Nous ne collectons aucune donnée de localisation.",
+    "displayRequest": "Afficher la demande"
+  }
+}

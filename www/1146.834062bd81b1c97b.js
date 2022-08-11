@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp=self.webpackChunkapp||[]).push([[1146],{1146:(u,n,s)=>{s.r(n),s.d(n,{ZipPluginWeb:()=>o});var l=s(7423);class o extends l.Uw{constructor(){super({name:"ZipPlugin",platforms:["web"]})}zip(e){return console.log(e),Promise.resolve({path:e.destination})}unZip(e){return console.log(e),Promise.resolve({path:e.destination})}}}}]);
