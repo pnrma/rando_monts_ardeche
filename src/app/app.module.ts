@@ -27,6 +27,8 @@ import { InAppDisclosureComponent } from '@app/components/in-app-disclosure/in-a
 import { SettingsService } from '@app/services/settings/settings.service';
 import { OnlineTreksService } from '@app/services/online-treks/online-treks.service';
 import { SelectTrekComponent } from '@app/components/select-trek/select-trek.component';
+import { NgxMatomoTrackerModule } from '@ngx-matomo/tracker';
+import { NgxMatomoRouterModule } from '@ngx-matomo/router';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -65,7 +67,9 @@ registerLocaleData(localeFr, 'fr');
         useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
-    })
+    }),
+    NgxMatomoTrackerModule.forRoot({ trackerUrl: 'matomo.destination-parc-monts-ardeche.fr', siteId: '1' }),
+    NgxMatomoRouterModule
   ],
   providers: [
     DeviceOrientation,
